@@ -9,37 +9,53 @@ import SwiftUI
 
 struct SplashView: View {
     @ObservedObject var coordinator: AppCoordinator
-
+    @State private var isAnimating = false
+    @State private var isActive = false
+    @State private var moveToLeft = false
+    
     var body: some View {
         ZStack {
             
-            Color.greenLight
+            Color.greenLight.ignoresSafeArea()
             
-            VStack(spacing: 8) {
+            VStack(spacing: 12) {
                 Image(systemName: "mappin.and.ellipse")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
                     .foregroundColor(.white)
-                    
+                    .scaleEffect(isAnimating ? 1 : 0.8)
+                    .opacity(isAnimating ? 1 : 0)
                 
                 Text("Nearby")
                     .font(.largeTitle)
                     .bold()
+                    .opacity(isAnimating ? 1 : 0)
+                    .offset(y: isAnimating ? 0 : 10)
                 Text("Clube de Benefícios")
                     .font(.caption)
-                
+                    .opacity(isAnimating ? 1 : 0)
+                    .offset(y: isAnimating ? 0 : 10)
                 
                 ProgressView()
                     .padding()
+                    .opacity(isAnimating ? 1 : 0)
             }
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Aguarda 2 segundos
-                    // coordinator.goToHome()
+                withAnimation(.easeOut(duration: 1)) {
+                    isAnimating = true
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    isActive = true
+                    
                 }
             }
+            .fullScreenCover(isPresented: $isActive) {
+                WelcomeView()
+                    .transition(.move(edge: .trailing))
+            }
             .foregroundStyle(.white)
-        }.ignoresSafeArea()
+        }
     }
 }
 

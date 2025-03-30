@@ -22,6 +22,13 @@ class AppCoordinator: ObservableObject, Coordinator {
         return currentView
     }
     
+    func goToWelcome() {
+        withAnimation(.easeInOut(duration: 1)) {
+            self.currentView = AnyView(WelcomeView().transition(.move(edge: .bottom)))
+        }
+    }
+
+    
     /*
     func goToHome() {
         self.currentView = AnyView(HomeView(coordinator: self))
