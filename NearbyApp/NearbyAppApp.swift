@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct NearbyAppApp: App {
+    
+    @StateObject var coordinator = AppCoordinator()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            coordinator.start()
         }
     }
 }
