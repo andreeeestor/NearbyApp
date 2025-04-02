@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781DF1B82D9CC767002E0D5D /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781DF1B72D9CC767002E0D5D /* PlaceModel.swift */; };
 		783A56922D9898FE00105F37 /* NearbyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A56912D9898FE00105F37 /* NearbyAppApp.swift */; };
 		783A56942D9898FE00105F37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A56932D9898FE00105F37 /* ContentView.swift */; };
 		783A56962D9898FF00105F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783A56952D9898FF00105F37 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 		783A56A42D98CCA500105F37 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A56A32D98CCA500105F37 /* Colors.swift */; };
 		783A56A72D98D87500105F37 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A56A62D98D87500105F37 /* AppCoordinator.swift */; };
 		783A56AD2D98DAB000105F37 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A56AC2D98DAB000105F37 /* SplashView.swift */; };
+		78BE9D942D9AAC22004B515D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE9D932D9AAC22004B515D /* HomeView.swift */; };
+		78BE9D962D9AAEA8004B515D /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE9D952D9AAEA8004B515D /* PlacesView.swift */; };
 		78DD3F9B2D99E18A001C317A /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78DD3F8D2D99E18A001C317A /* Rubik-Italic.ttf */; };
 		78DD3F9C2D99E18A001C317A /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78DD3F8E2D99E18A001C317A /* Rubik-ExtraBold.ttf */; };
 		78DD3F9D2D99E18A001C317A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78DD3F8F2D99E18A001C317A /* Rubik-Regular.ttf */; };
@@ -34,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781DF1B72D9CC767002E0D5D /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		783A568E2D9898FE00105F37 /* NearbyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		783A56912D9898FE00105F37 /* NearbyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAppApp.swift; sourceTree = "<group>"; };
 		783A56932D9898FE00105F37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		783A56A32D98CCA500105F37 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		783A56A62D98D87500105F37 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		783A56AC2D98DAB000105F37 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		78BE9D932D9AAC22004B515D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		78BE9D952D9AAEA8004B515D /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		78DD3F8D2D99E18A001C317A /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		78DD3F8E2D99E18A001C317A /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
 		78DD3F8F2D99E18A001C317A /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -73,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		781DF1B62D9CC753002E0D5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				781DF1B72D9CC767002E0D5D /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		78355CA32D99E0C5002E27FB /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +115,7 @@
 		783A56902D9898FE00105F37 /* NearbyApp */ = {
 			isa = PBXGroup;
 			children = (
+				781DF1B62D9CC753002E0D5D /* Models */,
 				78DD3FAC2D99E761001C317A /* Info.plist */,
 				78F79EEA2D99A80000FC1616 /* Components */,
 				783A56A92D98D9D600105F37 /* Views */,
@@ -144,6 +159,7 @@
 			children = (
 				783A56AC2D98DAB000105F37 /* SplashView.swift */,
 				78F79EED2D99AD0400FC1616 /* WelcomeView.swift */,
+				78BE9D932D9AAC22004B515D /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				78F79EEB2D99A99700FC1616 /* TipsView.swift */,
+				78BE9D952D9AAEA8004B515D /* PlacesView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -269,11 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BE9D942D9AAC22004B515D /* HomeView.swift in Sources */,
 				78DD3FAB2D99E280001C317A /* Fonts.swift in Sources */,
 				78F79EEC2D99A99700FC1616 /* TipsView.swift in Sources */,
 				783A56A72D98D87500105F37 /* AppCoordinator.swift in Sources */,
 				783A56942D9898FE00105F37 /* ContentView.swift in Sources */,
 				783A56AD2D98DAB000105F37 /* SplashView.swift in Sources */,
+				78BE9D962D9AAEA8004B515D /* PlacesView.swift in Sources */,
+				781DF1B82D9CC767002E0D5D /* PlaceModel.swift in Sources */,
 				783A56A42D98CCA500105F37 /* Colors.swift in Sources */,
 				783A56922D9898FE00105F37 /* NearbyAppApp.swift in Sources */,
 				78F79EEE2D99AD0400FC1616 /* WelcomeView.swift in Sources */,

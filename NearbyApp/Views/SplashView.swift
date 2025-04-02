@@ -51,7 +51,7 @@ struct SplashView: View {
                 }
             }
             .fullScreenCover(isPresented: $isActive) {
-                WelcomeView()
+                WelcomeView(coordinator: coordinator)
                     .transition(.move(edge: .trailing))
             }
             .foregroundStyle(.white)

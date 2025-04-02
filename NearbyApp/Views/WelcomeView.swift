@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @ObservedObject var coordinator: AppCoordinator
+    
+    
     var body: some View {
         VStack(alignment: .leading) {
             Image(systemName: "mappin.and.ellipse")
@@ -39,7 +42,7 @@ struct WelcomeView: View {
             Spacer()
             
             Button(action: {
-                print("Botão pressionado")
+                coordinator.goToHome()
             }) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
@@ -60,5 +63,5 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView()
+    WelcomeView(coordinator: AppCoordinator())
 }
