@@ -8,7 +8,14 @@
 import Foundation
 
 struct Place {
-    let imageName: String
-    let title: String
+    let id: String
+    let name: String
     let description: String
+    let coupouns: Int
+    let latitude: Double
+    let longitude: Double
+    let address: String
+    let phone: String
+    let cover: String
+    let categoryId: String
 }

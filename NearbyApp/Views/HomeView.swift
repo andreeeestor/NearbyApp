@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct HomeView: View {
     @ObservedObject var coordinator: AppCoordinator
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .bottom) {
+            MapView()
+            ContainerView()
+                .offset(y: 350)
+        }
     }
 }
 
